@@ -1,0 +1,160 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: #212121;;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+p, li {
+  font-size: 14px;
+  color: #262b33;
+}
+
+li {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+p {
+  margin: 6px 0 6px 26px;
+  line-height: 1.6;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0 0 0 26px;
+}
+
+.fas {
+  font-size: 15px;
+  padding: 0 7px 0 0;
+}
+
+.container {
+  width: 978px;
+  margin: 20px auto;
+  padding: 0 60px 60px;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@media print {
+  html, body {
+    background-color: white;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+  }
+  .download-cv {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 900px) {
+  .container {
+    margin: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:visited {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+.main-container {
+  padding: 50px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact p {
+  font-size: 12px;
+  margin: 0 0 0 20px;
+}
+
+.details {
+  width: 60%;
+}
+
+.aside {
+  width: 35%;
+}
+
+.aside p {
+  margin: 6px 0 6px 31px;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0 30px;
+}
+
+.personal-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.img-profile {
+  width: 75px;
+  height: 75px;
+  border-radius: 4px;
+  background-size: cover;
+  margin-right: 25px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 0 5px;
+}
+
+.domain {
+  font-size: 14px;
+}
+
+.section {
+  padding: 0 0 20px;
+}
+
+.time-range {
+  font-size: 12px;
+  font-style: italic;
+  padding: 0 0 5px;
+}
+
+.emp-title {
+  margin: 0 0 10px;
+}
+
+.works {
+  margin: 0;
+}
