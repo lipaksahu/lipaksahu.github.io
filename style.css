@@ -158,3 +158,10 @@ a, a:visited {
 .works {
   margin: 0;
 }
+
+.skills span {
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+  margin: 0 0 0 -6px;
+}
