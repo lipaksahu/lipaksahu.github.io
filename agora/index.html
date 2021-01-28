@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Click Install</title>
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper" id="me">
+    <div class="overlay">
+      <div class="btn-close" onclick="handleClose();">
+        <img src="images/close.svg" alt="close" />
+      </div>
+      <div class="loader-wrapper">
+        <div class="loader1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="over-text">Taking you to the lock screen..</p>
+      </div>
+    </div>
+    <div class="logo">
+      <div class="articleBy">Article By PhonePe</div>
+      <img src="images/glance-logo.svg" alt="logo" class="glanceLogo" />
+    </div>
+    <div class="container">
+      <div class="featured">FEATURED</div>
+      <div class="social" id="social">
+        <div class="left-social" id="leftSocial">
+          <div class="installButton">
+            <div class="cont-top">
+              <div class="unlock" onclick="handleClick();">
+                <!-- <img src="images/thunder.svg" /> -->
+                <span class="text"></span>
+              </div>
+              <!-- <div class="info" onclick="handleClickInfo('info');">
+                      <img src="images/info.svg" />
+                    </div> -->
+            </div>
+            <!-- <div class="cont-bottom">
+                    <div class="permission">
+                      <p>
+                        By installing you accept the
+                        <span onclick="handleClickInfo();">permissions.</span>
+                      </p>
+                    </div>
+                  </div> -->
+          </div>
+        </div>
+        <div class="right-social">
+          <div class="whatsappIcon">
+            <img onclick="whatsappClick();" src="images/whatsapp.png" />
+          </div>
+          <div class="like">
+            <img id="likeButton" src="images/like-gray.png" onclick="likeClick();" />
+          </div>
+          <div class="unlike">
+            <img id="unlikeButton" src="images/like-red.svg" onclick="unlikeClick();" />
+          </div>
+          <div class="more">
+            <img onclick="moreClick();" src="images/more.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="installButton">
+        <div class="cont-top">
+          <div class="unlock" onclick="handleClick();">
+            <!-- <img src="images/thunder.svg" /> -->
+            <span class="text"></span>
+          </div>
+          <!-- <div class="info" onclick="handleClickInfo('info');">
+            <img src="images/info.svg" />
+          </div> -->
+        </div>
+        <!-- <div class="cont-bottom">
+          <div class="permission">
+            <p>
+              By installing you accept the
+              <span onclick="handleClickInfo();">permissions.</span>
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <script>
+    const uuidv4 = () => {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+        /[xy]/g,
+        function (c) {
+          var r = (Math.random() * 16) | 0,
+            v = c == "x" ? r : (r & 0x3) | 0x8;
+          return v.toString(16);
+        }
+      );
+    };
+  </script>
+  <script src="js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.2.1.js"></script>
+  <script src="./js/agora_config.js"></script>
+</body>
+
+</html>
