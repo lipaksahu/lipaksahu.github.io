@@ -6,8 +6,13 @@ html {
 }
 
 .wrapper {
-  width: 100%;
-  height: 100vh;
+  /* width: 100%;
+  height: 100vh; */
+  width: 320px;
+  height: 570px;
+  display: table;
+  margin: 50px auto 0;
+  position: relative;
   color: #ffffff;
   background-size: cover;
   display: flex;
@@ -23,34 +28,26 @@ html {
 }
 
 .logo {
+  position: absolute;
+  width: inherit;
+}
+
+.logoContainer {
   display: flex;
   margin: 4% 5%;
   justify-content: space-between;
   align-items: center;
 }
 
-.articleBy{
-  font-size: 10px;
-}
-
-.logo span {
-  font-size: 14px;
-  padding: 45px 0 0;
-}
-
-h1 {
-  font-size: 50px;
-}
-
 .container {
-  position: fixed;
+  position: absolute;
   left: 5%;
   margin-bottom: 3%;
   bottom: 0;
   width: 90%;
 }
 
-.featured{
+.featured {
   margin-left: 1%;
   font-size: 11px;
 }
@@ -64,9 +61,6 @@ h1 {
 }
 
 .left-social {
-  /* max-width: 70%;
-  font-size: 17px;
-  font-family: auto; */
   width: 100%;
 }
 
@@ -94,17 +88,17 @@ h1 {
   /* height: 28px; */
 }
 
-.whatsappIcon img{
+.whatsappIcon img {
   width: 35px;
   /* height: 35px; */
   border-radius: 35px;
 }
 
-.more{
+.more {
   margin-top: 25px;
 }
 
-.more img{
+.more img {
   width: 25px;
 }
 
@@ -135,7 +129,7 @@ h1 {
   opacity: 0.5;
 }
 
-.text{
+.text {
   color: black;
 }
 
@@ -206,52 +200,115 @@ h1 {
   text-align: center;
 }
 
-.loader1 {
-  display: inline-block;
-  font-size: 0px;
-  padding: 0px;
+.commentArea {
   display: flex;
-  justify-content: center;
-}
-.loader1 span {
-  vertical-align: middle;
-  border-radius: 100%;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 3px 2px;
-  -webkit-animation: loader1 0.8s linear infinite alternate;
-  animation: loader1 0.8s linear infinite alternate;
-}
-.loader1 span:nth-child(1) {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
-  background: rgba(255, 255, 255, 0.6);
-}
-.loader1 span:nth-child(2) {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-  background: rgba(255, 255, 255, 0.8);
-}
-.loader1 span:nth-child(3) {
-  -webkit-animation-delay: -0.26666s;
-  animation-delay: -0.26666s;
-  background: rgba(255, 255, 255, 1);
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes loader1 {
-  from {
-    transform: scale(0, 0);
+.likeArea {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#likeButton {
+  width: 28px;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+.commentBox {
+  /* margin: 15px 0; */
+  padding: 10px 10px;
+  width: 85%;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 30px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  background: transparent;
+  /* font-size: 16px; */
+  color: #ffffff;
+}
+
+.sendMsg {
+  padding: 15px 8%;
+  width: auto;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  /* font-size: 16px; */
+  /* font-weight: 600; */
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  z-index: -1;
+}
+
+.live {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.livePulse {
+  background: red;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #0000001a;
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
   }
-  to {
-    transform: scale(1, 1);
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
 }
-@-webkit-keyframes loader1 {
-  from {
-    -webkit-transform: scale(0, 0);
-  }
-  to {
-    -webkit-transform: scale(1, 1);
-  }
+
+.chatMsg {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.chatMsg span {
+  background: red;
+  color: white;
+  padding: 0 5px;
+  font-style: normal;
+  border-radius: 5px;
+  margin-right: 8px;
+  font-size: 10px;
 }
